@@ -17,5 +17,13 @@ pipeline {
                 sh './scripts/run-tests.sh'
             }
         }
+        stage ('Upload Artifact') {
+            when{
+                branch 'master'
+            }
+            steps {
+                sh 'echo Upload'
+            }
+        }
     }
 }
