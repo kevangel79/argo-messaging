@@ -7,9 +7,14 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage ('Build') {
             steps {
-                sh './build.sh'
+                sh 'echo Building >>>>>>>'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './scripts/run-tests.sh'
             }
         }
     }
