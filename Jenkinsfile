@@ -22,7 +22,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh 'echo Upload'
+                sh 'echo Upload Artifacts'
             }
         }
     }
