@@ -8,6 +8,6 @@ mv *.tar.gz ${TMPDIR}
 cd ${TMPDIR} 
 tar -xzf *.tar.gz 
 find . -name '*.spec' -exec yum-builddep {} \; 
-rpmbuild -ta --define='dist .${RPMDIST}' *gz
+rpmbuild -ta --define="dist .${RPMDIST}" *gz
 mkdir -p ${WORKDIR}/target
 mv ./* ${WORKDIR}/target
