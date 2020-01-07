@@ -2,11 +2,12 @@
 
 make sources
 WORKDIR=`pwd`
-TMPDIR=`mktemp -d /tmp/rpmbuild.XXXXXXXXXX` 
+TMPDIR=`mktemp -d /tmp/rpmbuild.XXXXXXXXXX`
+RPMDIST='el7' 
 mv *.tar.gz ${TMPDIR} 
 cd ${TMPDIR} 
 tar -xzf *.tar.gz 
 find . -name '*.spec' -exec yum-builddep {} \; 
-rpmbuild -ta --define='dist .\"el7\"' *gz
+rpmbuild -ta --define='dist .${RPMDIST}' *gz
 mkdir -p ${WORKDIR}/target
 mv ./* ${WORKDIR}/target
