@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ARGOeu/argo-messaging.svg?branch=devel)](https://travis-ci.org/ARGOeu/argo-messaging)
+[![Build Status](https://jenkins.einfra.grnet.gr/buildStatus/icon?job=ARGO%2Fargo-messaging%2Fmaster)](https://jenkins.einfra.grnet.gr/job/ARGO/job/argo-messaging/job/master/)
 # ARGO Messaging
 
 > ## :warning: Warning :warning:
